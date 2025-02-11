@@ -12,3 +12,16 @@ function getProductsByCategory(products, category) {
     return products.filter(product => product.category === category);
 }   
 console.log(getProductsByCategory(products, "Electronics"));s 
+
+// Task 2
+
+function applyDiscount(products, discountRate) {
+    return products.map(product => {
+        return {
+            ...product,
+            price: product.price - (product.price * discountRate)
+        };  
+    });
+}
+
+console.log(applyDiscount(products, 0.1)); 
