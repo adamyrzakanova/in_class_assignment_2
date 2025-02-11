@@ -7,3 +7,8 @@ let products = [
     { name: "Notebook", price: 5, category: "Stationery" },
     { name: "Headphones", price: 100, category: "Electronics" },
 ]; 
+
+function getProductsByCategory(products, category) {
+    return products.filter(product => product.category === category);
+}   
+console.log(getProductsByCategory(products, "Electronics"));s 
